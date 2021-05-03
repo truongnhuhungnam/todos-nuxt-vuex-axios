@@ -15,8 +15,10 @@
     "bootstrap": "^4.6.0",
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.9.1",
+    "mini-toastr": "^0.8.1",
     "nuxt": "^2.15.3",
-    "uuid": "^8.3.2"
+    "uuid": "^8.3.2",
+    "vue-notifications": "^1.0.2"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^6.0.0",

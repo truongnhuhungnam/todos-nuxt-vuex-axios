@@ -30,6 +30,7 @@ export default {
         ...mapActions({
             addTodos: 'todos/addTodos',
         }),
+
         onSubmit(event) {
             event.preventDefault()
             this.addTodos({
@@ -38,6 +39,15 @@ export default {
                 title: this.title,
                 completed: false,
             })
+            this.showAddSuccess()
+        },
+    },
+
+    notifications: {
+        showAddSuccess: {
+            title: 'Add Todo Success',
+            message: 'Successed to add a todo',
+            success: 'error',
         },
     },
 }
