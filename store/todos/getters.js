@@ -1,1 +1,5 @@
-export const getters = {}
+export default {
+    todos: (state) => {
+        return state.todos
+    },
+}

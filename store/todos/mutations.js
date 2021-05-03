@@ -1,1 +1,5 @@
-export const mutations = {}
+export default {
+    SET_TODOS(state, todos) {
+        state.todos = todos
+    },
+}
