@@ -25,6 +25,14 @@
                     </p>
                 </div>
                 <div class="buttonGroup d-flex flex-column">
+                    <b-button
+                        :to="'todos/' + todo.id"
+                        squared
+                        variant="outline-info"
+                        class="mb-2"
+                    >
+                        View Detail
+                    </b-button>
                     <b-button squared variant="outline-success" class="mb-2">
                         Update
                     </b-button>
