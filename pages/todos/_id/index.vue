@@ -1,11 +1,20 @@
 <template>
     <div>
         <b-list-group class="mt-4">
-            <b-list-group-item>User Id: {{ todo.userId }}</b-list-group-item>
-            <b-list-group-item>Id: {{ todo.id }}</b-list-group-item>
-            <b-list-group-item>Title: {{ todo.title }}</b-list-group-item>
             <b-list-group-item>
-                Completed Status: {{ todo.completed }}
+                <span class="text-primary">ID:</span>
+                {{ todo.id }}
+            </b-list-group-item>
+            <b-list-group-item>
+                <span class="text-primary">User ID:</span>
+                {{ todo.userId }}
+            </b-list-group-item>
+            <b-list-group-item>
+                <span class="text-primary">Title:</span>
+                {{ todo.title }}
+            </b-list-group-item>
+            <b-list-group-item>
+                <span class="text-primary">Status:</span> {{ todo.completed }}
             </b-list-group-item>
         </b-list-group>
         <b-button to="/" squared variant="outline-info" class="mt-4">

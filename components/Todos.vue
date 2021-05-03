@@ -1,6 +1,6 @@
 <template>
     <div class="Todos mt-4">
-        <TodoForm />
+        <TodoAddForm />
         <b-list-group class="mt-4">
             <b-list-group-item
                 v-for="todo in todos"
@@ -39,7 +39,7 @@
                     <b-button
                         squared
                         variant="outline-danger"
-                        @click="deleteTodo(todo.id)"
+                        @click="deleteATodo(todo.id)"
                     >
                         Delete
                     </b-button>
@@ -51,11 +51,11 @@
 
 <script>
 import { mapState, mapActions } from 'Vuex'
-import TodoForm from './TodoForm.vue'
+import TodoAddForm from './TodoAddForm.vue'
 export default {
     name: 'Todos',
 
-    components: { TodoForm },
+    components: { TodoAddForm },
 
     computed: {
         ...mapState({
@@ -70,6 +70,19 @@ export default {
         ...mapActions({
             deleteTodo: 'todos/deleteTodo',
         }),
+
+        deleteATodo(todoId) {
+            this.deleteTodo(todoId)
+            this.showDeleteSuccess()
+        },
+    },
+
+    notifications: {
+        showDeleteSuccess: {
+            title: 'Delete Todo Success',
+            message: 'Deleted to add a todo',
+            type: 'error',
+        },
     },
 }
 </script>

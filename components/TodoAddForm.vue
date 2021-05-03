@@ -18,7 +18,7 @@
 import { mapActions } from 'vuex'
 import { v4 as uuidv4 } from 'uuid'
 export default {
-    name: 'TodoForm',
+    name: 'TodoAddForm',
 
     data() {
         return {
@@ -47,7 +47,7 @@ export default {
         showAddSuccess: {
             title: 'Add Todo Success',
             message: 'Successed to add a todo',
-            success: 'error',
+            type: 'success',
         },
     },
 }
