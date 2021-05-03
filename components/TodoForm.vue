@@ -8,7 +8,9 @@
             required
         ></b-form-input>
 
-        <b-button variant="primary" type="submit">Add a todo</b-button>
+        <b-button variant="primary" type="submit" squared>
+            Add a todo
+        </b-button>
     </b-form>
 </template>
 

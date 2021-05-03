@@ -8,4 +8,9 @@ export default {
         await this.$axios.$post('/todos', newTodo)
         commit('ADD_TODO', newTodo)
     },
+
+    async deleteTodo({ commit }, todoId) {
+        await this.$axios.$delete(`/todos/${todoId}`)
+        commit('DELETE_TODO', todoId)
+    },
 }
